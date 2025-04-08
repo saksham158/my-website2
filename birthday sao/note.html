@@ -1,0 +1,36 @@
+<!-- Special Note Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Note</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>A Little Message Just for You 💌</h1>
+        <p class="message">Sao, you are one of the most wonderful people I know. I cherish every moment with you, and I hope this birthday brings you endless joy and love. Always stay happy and amazing! 🎈💖</p>
+        <div class="photo-gallery">
+            <img src="photo8.jpg" alt="Memory 1">
+            
+        </div>
+        <button onclick="restart()">MY Feelings</button>
+    </div>
+    <script>
+        function restart() {
+            window.location.href = "feeling.html";
+        }
+         // Generate balloons dynamically
+  for (let i = 0; i < 20; i++) {
+    let balloon = document.createElement("div");
+    balloon.className = "balloon";
+    balloon.style.left = Math.random() * 100 + "vw";
+    balloon.style.background = `hsl(${Math.random() * 360}, 70%, 60%)`;
+    balloon.style.animationDuration = (5 + Math.random() * 5) + "s";
+    document.body.appendChild(balloon);
+  }
+    </script>
+</body>
+</html>
+ 

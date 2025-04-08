@@ -1,0 +1,164 @@
+/* General Styles */
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+    color: white;
+    overflow: hidden;
+}
+.container {
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Heading Animation */
+h1 {
+    font-size: 2.5rem;
+    animation: glow 1.5s infinite alternate;
+}
+@keyframes glow {
+    from { text-shadow: 0 0 10px white; }
+    to { text-shadow: 0 0 20px pink; }
+}
+
+/* Button Styles */
+button {
+    margin-top: 20px;
+    padding: 10px 10px;
+    font-size: 1.2rem;
+    color: white;
+    background: #ff4e50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button:hover {
+    background: #ff7676;
+}
+
+/* Gift Box Animation */
+.gift-box {
+    width: 100px;
+    height: 100px;
+    background: gold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    border-radius: 10px;
+    cursor: pointer;
+    animation: bounce 1.5s infinite;
+}
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Hidden Elements */
+.hidden {
+    display: none;
+}
+
+/* Photo Gallery */
+.photo-gallery img {
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+.photo-gallery img:hover {
+    transform: scale(1.1);
+}
+
+.photo {
+    width: 500px ;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+/* Fade-in Effect */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+<!-- Birthday Balloon Animation Start -->
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #ffecd2, #fcb69f);
+    overflow: hidden;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    color: #fff;
+  }
+
+  h1 {
+    margin-top: 50px;
+    font-size: 3rem;
+    animation: fadeIn 3s ease-in-out;
+  }
+
+  p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 20px auto;
+    animation: fadeIn 4s ease-in-out;
+  }
+
+  .balloon {
+    width: 50px;
+    height: 70px;
+    background: red;
+    border-radius: 0 0 25px 25px;
+    position: absolute;
+    bottom: -100px;
+    animation: float 10s infinite ease-in;
+  }
+
+  .balloon::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 10px;
+    background: #444;
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0) rotate(0deg);
+    }
+    100% {
+      transform: translateY(-110vh) rotate(360deg);
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>

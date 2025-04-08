@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Sao!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 Happy Birthday, Sao! 🎂</h1>
+        <p>Wishing you a day filled with love, laughter, and endless joy! 💖</p>
+        <div class="photo-gallery">
+            <img src="photo1.jpg" alt="cuite">
+            
+        </div>
+        <button onclick="nextPage()">Click for a Surprise!</button>
+    </div>
+    <script>
+        function nextPage() {
+            window.location.href = "surprise.html";
+        }
+         // Generate balloons dynamically
+  for (let i = 0; i < 20; i++) {
+    let balloon = document.createElement("div");
+    balloon.className = "balloon";
+    balloon.style.left = Math.random() * 100 + "vw";
+    balloon.style.background = `hsl(${Math.random() * 360}, 70%, 60%)`;
+    balloon.style.animationDuration = (5 + Math.random() * 5) + "s";
+    document.body.appendChild(balloon);
+  }
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,42 @@
+<!-- Surprise Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise for Sao!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎁 A Special Gift for You! 🎁</h1>
+        <div class="gift-box" onclick="openGift()">
+            <p>Click to Open</p>
+        </div>
+        <p id="gift-message" class="hidden">You are an amazing person, and I hope this year brings you everything you dream of! 💖</p>
+        <div class="photo-gallery">
+            <img src="photo2.jpg" alt="Sao">
+            
+        </div>
+        <button onclick="nextPage()">See More</button>
+    </div>
+    <script>
+        function openGift() {
+            document.querySelector(".gift-box").style.display = "none";
+            document.getElementById("gift-message").classList.remove("hidden");
+        }
+        function nextPage() {
+            window.location.href = "memory.html";
+        }
+         // Generate balloons dynamically
+  for (let i = 0; i < 20; i++) {
+    let balloon = document.createElement("div");
+    balloon.className = "balloon";
+    balloon.style.left = Math.random() * 100 + "vw";
+    balloon.style.background = `hsl(${Math.random() * 360}, 70%, 60%)`;
+    balloon.style.animationDuration = (5 + Math.random() * 5) + "s";
+    document.body.appendChild(balloon);
+  }
+    </script>
+</body>
+</html>
